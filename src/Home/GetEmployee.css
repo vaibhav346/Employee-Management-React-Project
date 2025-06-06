@@ -1,0 +1,17 @@
+.employee-card {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.employee-card:hover {
+  transform: translateY(-5px);
+}
+
+.employee-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 3px solid #0d6efd;
+}
