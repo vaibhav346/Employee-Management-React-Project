@@ -68,7 +68,7 @@ export default function UpdateAndAddEmployee() {
     event.preventDefault();
 
     if(!validation()){
-      return alert("Fill the record");
+      return ;
     }
     else{
     let empadd={name,department,role,email,contactno,address,salary,joiningdate,dob,gender,img }

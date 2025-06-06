@@ -67,7 +67,7 @@ const toggleMenu = () => {
           <p>📚 Welcome to the Employee Management System! Browse Employee, manage members, and more. 📖</p>
         </div>
         
-<GetEmployee></GetEmployee>
+{/* <GetEmployee></GetEmployee> */}
 <EmployeeShow></EmployeeShow>
 
         <div className="info-table">
