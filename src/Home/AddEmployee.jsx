@@ -46,7 +46,7 @@ export default function UpdateAndAddEmployee() {
       setError("Please enter valid salary amount")
       return false;
     }
-    else if(/\S+@\S+\.\S/.test(email)){
+    else if(!/\S+@\S+\.\S/.test(email)){
       setError("Please enter valid email address");
       return false;
     }
@@ -68,7 +68,7 @@ export default function UpdateAndAddEmployee() {
     event.preventDefault();
 
     if(!validation()){
-      return ;
+      return "Fill all data is correct";
     }
     else{
     let empadd={name,department,role,email,contactno,address,salary,joiningdate,dob,gender,img }
