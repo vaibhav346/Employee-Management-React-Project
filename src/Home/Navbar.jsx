@@ -39,7 +39,7 @@ const toggleMenu = () => {
        {/* Header with Logo */}
         <div className="header">
           <img
-            src="https://thumbs.dreamstime.com/z/hand-book-logo-illustration-art-background-43965136.jpg?ct=jpeg"
+            src="/img/Logo.jpg"
             alt="Employee Logo"
           />
           <h1> Digital Employee Management System .Pvt .Limited</h1>
