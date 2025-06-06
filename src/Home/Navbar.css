@@ -5,7 +5,7 @@
   /* header css */
   .header {
     
-    background-color: red;
+    background-color: rgb(175, 145, 220);
     color: white;
     display: flex;
     align-items: center;
@@ -30,7 +30,7 @@
     text-align: center;
     padding-left: 2%;
     /* border: 2px solid black; */
-    color: white;
+    color: rgb(19, 74, 152);
   }
   
   /* Navbar Css */
