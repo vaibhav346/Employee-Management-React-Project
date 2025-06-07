@@ -1,26 +1,14 @@
-import React from 'react'
 import axios from 'axios'
 import { useState,useEffect } from 'react'
 import './EmployeeShow.css'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export default function EmployeeShow() {
 
     let[emp,setEmp]=useState([])
-    let[isupdate,setIsupdate]=useState(false)
-    const[eid,setEid]=useState(0)
-    const [img, setImg] = useState(null);
-      const [name, setName] = useState('');
-      const [department, setDepartment] = useState('');
-      const [role, setRole] = useState('');
-      const [email, setEmail] = useState('');
-      const [contactno, setContactno] = useState('');
-      const [address, setAddress] = useState('');
-      const [salary, setSalary] = useState('');
-      const [joiningdate, setJoiningdate] = useState('');
-      const [dob, setDob] = useState('');
-      const [gender, setGender] = useState('');
-      let [error,setError]=useState('')
+    let nevagite=useNavigate();
+    
+      // let [error,setError]=useState('')
 
       useEffect(()=>{
         fechempdata();
@@ -49,35 +37,6 @@ export default function EmployeeShow() {
     });
 };
 
-  let updateemp=(event)=>{
-    event.preventDefault();
-        let newemp={name,department,role,email,contactno,address,salary,joiningdate,dob,gender,img }
-        axios.put(`http://localhost:8080/api/updatebyid/${eid}`,newemp)
-        .then((response)=>{
-            if(response.data){
-                alert("Employee Update Sucessfully");
-            }
-        })
-        .catch((error)=>{console.log(error)});
-
-  }
-
- let update=(emp)=>{
-    setIsupdate(!isupdate)
-    console.log(emp)
-
-    setName(emp.name);
-    setDepartment(emp.department);
-    setRole(emp.role);
-    setEmail(emp.email);
-    setContactno(emp.contactno);
-    setAddress(emp.address);
-    setSalary(emp.salary);
-    setJoiningdate(emp.joiningdate);
-    setDob(emp.dob);
-    setGender(emp.gender);
-    setImg(emp.img);
-  }
 
   return (
     <div className='container'>
@@ -103,7 +62,7 @@ export default function EmployeeShow() {
         <strong>Gender:</strong>{emp.gender} <br />
     </p>
     <button className='delete' onClick={(e)=>{deleteemp(emp.eid)}}>Delete</button>
-    <button className='update'>Update</button>
+    <button className='update' onClick={()=>{nevagite(`/update/${emp.eid}`)}}>Update</button>
   </div>
 </div>
             </div>

@@ -1,5 +1,10 @@
+.main{
+  background-color: antiquewhite;
+  margin: 0;
+  padding: 0;
+}
 .employee-card {
-  background-color: #f8f9fa;
+  background-color: rgb(194, 122, 122);
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.2s ease;
@@ -15,3 +20,4 @@
   object-fit: cover;
   border: 3px solid #0d6efd;
 }
+

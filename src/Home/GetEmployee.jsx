@@ -28,12 +28,13 @@ axios.get('http://localhost:8080/api/findall') // fetch all employees
   if (employees.length === 0) return <div className="text-center mt-4">Loading...</div>;
 
   return (
-    <div className="container mt-4">
+    <div className='main'>
+    <div className="container mt-4" style={{backgroundColor:'#c96cc9',width:'100vw'}} >
       <h2 className="text-center mb-4">All Employees</h2>
       <div className="row">
         {employees.map((employee) => (
           <div className="col-md-6 col-lg-4 mb-4" key={employee.eid}>
-            <div className="card employee-card shadow">
+            <div className="card employee-card shadow " >
               <div className="row g-0">
                 <div className="col-4 text-center p-2">
                   <img
@@ -61,6 +62,7 @@ axios.get('http://localhost:8080/api/findall') // fetch all employees
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 }

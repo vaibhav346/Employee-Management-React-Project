@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './Navbar.css'
 // import EmployeeProfile from './EmployeeProfile';
-import GetEmployee from './GetEmployee';
+// import GetEmployee from './GetEmployee';
 import { Link } from 'react-router-dom';
 import EmployeeShow from './EmployeeShow';
 
@@ -61,7 +61,7 @@ const toggleMenu = () => {
             <li><a href="/AdminRegister">Admin Register</a></li>
             <li><a href="/AdminLogin">Admin Login</a></li>
              <li><Link to="/EmployeeR">Employee Register</Link></li>
-              <li><a href="/AdminLogin">Employee Login</a></li>
+              <li><a href="/update">Employee Login</a></li>
 
           </ul>
         </nav>
@@ -133,7 +133,7 @@ const toggleMenu = () => {
           <div className="contact-column">
             <h3>📌 Quick Links</h3>
             <ul>
-              <li><a href="/books">Employee</a></li>
+              <li><a href="/getemployee">Employee</a></li>
               <li><a href="/members">Members</a></li>
               <li><a href="/about">About</a></li>
               <li><a href="/contact">Contact</a></li>

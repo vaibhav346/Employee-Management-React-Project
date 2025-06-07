@@ -9,7 +9,7 @@
   border-radius: 30px;
   cursor: pointer;
   font-weight: bold;
-  margin-left: 30px;
+  
   
   
 }
@@ -23,6 +23,7 @@
   border-radius: 30px;
   cursor: pointer;
   font-weight: bold;
+  margin-left: 30px;
   /* margin-left: 30px; */
 }
 button:hover{

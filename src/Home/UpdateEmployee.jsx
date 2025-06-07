@@ -1,14 +1,34 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+
 import './AddEmployee.css';
 
 
 export default function UpdateEmployee() {
  
-    let[isupdate,setIsupdate]=useState(false)
-    let[emp,setEmp]=useState([])
-    const[eid,setEid]=useState(0)
+  let params=useParams();
+  // return object which contain all values passed in url
+  let id=params.id;
+  console.log(id);
+  
+    // let[isupdate,setIsupdate]=useState(false)
+    let[emp,setEmp]=useState({
+      name: '',
+  email: '',
+  contactno: 0,
+  department: '',
+  role: '',
+  salary: 0,
+  address: '',
+  img: null,
+  gender: '',
+  dob: '',
+  joiningdate: ''
+
+    })
+    // const[eid,setEid]=useState(0)
   const [img, setImg] = useState(null);
   const [name, setName] = useState('');
   const [department, setDepartment] = useState('');
@@ -20,62 +40,73 @@ export default function UpdateEmployee() {
   const [joiningdate, setJoiningdate] = useState('');
   const [dob, setDob] = useState('');
   const [gender, setGender] = useState('');
-  let [error,setError]=useState('')
+
+  // let [error,setError]=useState('')
 
   
-  useEffect(()=>{
-    fechempdata();
-  },[])
+    const handleImageChange = (event) => {
+    let file=event.target.files[0]; // upload mutiple file file is object
+    let fullpath=`./img//${file.name}`;
+    setImg(fullpath);
+     
+    console.log(img)
+  };
 
-  let fechempdata=()=>{
-    axios.get("http://localhost:8080/api/findall")
-    .then((response)=>{
-        setEmp(response.date);
-    })
+   useEffect(()=>{
+        getemployee();
+        //console.log(emp)
+    },[])
 
-    .catch((error)=>{
-        console.log(error)
-    })
+  let getemployee=()=>{
+     axios.get(`http://localhost:8080/api/findbyid/${id}`)
+        .then((response)=>{
+           const d = response.data;
+      setEmp(d); // just if you need it elsewhere
+            // setEmployee(response.data)
+            // console.log(emp)
+           //console.log(response) 
+           setName(response.data.name)
+           setDepartment(response.data.department)
+           setRole(response.data.role)
+           setEmail(response.data.email)
+           setImg(response.data.img)
+           setContactno(response.data.contactno)
+           setAddress(response.data.address)
+           setSalary(response.data.salary)
+           setJoiningdate(response.data.joiningdate)
+           setDob(response.data.dob)
+           setGender(response.data.gender)
+
+        })
+        .catch((error)=>{
+            console.log(error)
+
+        })
+
+        
   }
 
   let updateemp=(event)=>{
     event.preventDefault();
-        let newemp={name,department,role,email,contactno,address,salary,joiningdate,dob,gender,img }
-        axios.put(`http://localhost:8080/api/updatebyid/${eid}`,newemp)
-        .then((response)=>{
-            if(response.data){
-                alert("Employee Update Sucessfully");
-            }
-        })
-        .catch((error)=>{console.log(error)});
+      let updatedata={name,department,role,email,img,contactno,address,salary,joiningdate,dob,gender}
+     axios.put(`http://localhost:8080/api/updatebyid/${id}`,updatedata)
+     .then((response)=>{
+      console.log(response)
+      if(response.data!=null){
+        alert("Employee data updated sucessfully")
+      }
+     })
+     .catch((error)=>{alert("Error")})
 
-  }
-
- 
-
- let update=(emp)=>{
-    setIsupdate(!isupdate)
-    console.log(emp)
-
-    setName(emp.name);
-    setDepartment(emp.department);
-    setRole(emp.role);
-    setEmail(emp.email);
-    setContactno(emp.contactno);
-    setAddress(emp.address);
-    setSalary(emp.salary);
-    setJoiningdate(emp.joiningdate);
-    setDob(emp.dob);
-    setGender(emp.gender);
-    setImg(emp.img);
   }
   return (
     <div>
-    {
+      
 
-   isupdate? <form className="employee-form" onSubmit={updateemp}>
-      <h2>Employee Registration Form</h2>
-    
+      
+     <form className="employee-form" onSubmit={updateemp}>
+      <h2>Employee Update Form</h2>
+   
       <input type="text" name="name" placeholder="Name" value={name} onChange={(e)=>{setName(e.target.value)}}  />
       <input type="text" name="department" placeholder="Department" value={department} onChange={(e)=>{setDepartment(e.target.value)}} />
       <input type="text" name="role" placeholder="Role" value={role} onChange={(e)=>{setRole(e.target.value)}} />
@@ -96,11 +127,13 @@ export default function UpdateEmployee() {
       </select>
 
       <label>Upload Image:</label>
-      <input type="file" name="img" onChange={(e)=>{setImg(e.target.value)}} accept="image/*"  />
-
+      <input type="file" name="img" onChange={ handleImageChange } accept="image/*"  />
+ 
       <button type="submit">Update</button>
-    </form>:null
-}
+      
+      
+    </form>
+
 </div>
   );
 }
