@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import './AddEmployee.css';
 
@@ -11,7 +12,8 @@ export default function UpdateEmployee() {
   let params=useParams();
   // return object which contain all values passed in url
   let id=params.id;
-  console.log(id);
+  // console.log(id);
+  let navigate=useNavigate();
   
     // let[isupdate,setIsupdate]=useState(false)
     let[emp,setEmp]=useState({
@@ -94,6 +96,7 @@ export default function UpdateEmployee() {
       console.log(response)
       if(response.data!=null){
         alert("Employee data updated sucessfully")
+        navigate("/")
       }
      })
      .catch((error)=>{alert("Error")})

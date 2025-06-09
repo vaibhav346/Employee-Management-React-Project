@@ -6,6 +6,7 @@ import './Navbar.css'
 // import GetEmployee from './GetEmployee';
 import { Link } from 'react-router-dom';
 import EmployeeShow from './EmployeeShow';
+import EmployeeDashboard from './EmployeeDashboard';
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -60,7 +61,7 @@ const toggleMenu = () => {
             <li><a href="/ContactPage">Contact</a></li>
             <li><a href="/AdminRegister">Admin Register</a></li>
             <li><a href="/AdminLogin">Admin Login</a></li>
-             <li><Link to="/EmployeeR">Employee Register</Link></li>
+             <li><Link to="/EmployeeR">Add Employee</Link></li>
               <li><a href="/update">Employee Login</a></li>
 
           </ul>
@@ -74,7 +75,8 @@ const toggleMenu = () => {
         </div>
         
 {/* <GetEmployee></GetEmployee> */}
-<EmployeeShow></EmployeeShow>
+{/* <EmployeeShow></EmployeeShow> */}
+<EmployeeDashboard></EmployeeDashboard>
 
         <div className="info-table">
     <h2> Employee Information</h2>

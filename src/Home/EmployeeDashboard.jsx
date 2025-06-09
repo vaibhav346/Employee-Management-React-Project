@@ -4,7 +4,7 @@ import './EmployeeShow.css'
 import { useNavigate } from 'react-router-dom'
 // import AdminNavbar from './AdminNavbar'
 
-export default function EmployeeShow() {
+export default function EmployeeDashboard() {
 
   let[searchname,setSearchname]=useState('')
   let[searchdepartment,setSearchdepartment]=useState('')
@@ -54,7 +54,7 @@ let searchbydpet=()=>{
 
 
     let[emp,setEmp]=useState([])
-    let nevagite=useNavigate();
+    // let nevagite=useNavigate();
     
       // let [error,setError]=useState('')
 
@@ -72,18 +72,18 @@ let searchbydpet=()=>{
         })
     }
 
-    let deleteemp = (eid) => {
-  axios.delete(`http://localhost:8080/api/deletebyid/${eid}`)
-    .then((response) => {
-      if (response.data != null) {
-        alert("Record deleted successfully");
-        fechempdata();  // Re-fetch users after deletion
-      }
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-};
+//     let deleteemp = (eid) => {
+//   axios.delete(`http://localhost:8080/api/deletebyid/${eid}`)
+//     .then((response) => {
+//       if (response.data != null) {
+//         alert("Record deleted successfully");
+//         fechempdata();  // Re-fetch users after deletion
+//       }
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//     });
+// };
 
 
   return (
@@ -130,8 +130,8 @@ let searchbydpet=()=>{
         <strong>Address:</strong>{emp.address} <br />
         <strong>Gender:</strong>{emp.gender} <br />
     </p>
-    <button className='delete' onClick={(e)=>{deleteemp(emp.eid)}}>Delete</button>
-    <button className='update' onClick={()=>{nevagite(`/update/${emp.eid}`)}}>Update</button>
+    {/* <button className='delete' onClick={(e)=>{deleteemp(emp.eid)}}>Delete</button>
+    <button className='update' onClick={()=>{nevagite(`/update/${emp.eid}`)}}>Update</button> */}
   </div>
 </div>
             </div>

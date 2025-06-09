@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import './AddEmployee.css';
 
 
@@ -17,7 +18,7 @@ export default function UpdateAndAddEmployee() {
   //   gender: '',
   // });
 
-
+  let navigate=useNavigate();
 
   const [img, setImg] = useState(null);
   const [name, setName] = useState('');
@@ -76,6 +77,7 @@ export default function UpdateAndAddEmployee() {
     .then((response)=>{
       if(response.data){
         alert("Employee added sucessfully")
+        navigate("/")
       }
     })
     .catch((error)=>{alert(error)})

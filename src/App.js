@@ -7,6 +7,7 @@ import HomePage from './Home/HomePage';
 import AddEmployee from './Home/AddEmployee';
 import UpdateEmployee from './Home/UpdateEmployee';
 import GetEmployee from './Home/GetEmployee';
+import EmployeeShow from './Home/EmployeeShow';
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
           <Route path='/update/:id' element={<UpdateEmployee></UpdateEmployee>}></Route>
           <Route path='/update' element={<UpdateEmployee></UpdateEmployee>}></Route>
           <Route path='/getemployee' element={<GetEmployee></GetEmployee>}></Route>
+          <Route path='/EmployeeShow' element={<EmployeeShow></EmployeeShow>}></Route>
 
         </Routes>
       </div>
