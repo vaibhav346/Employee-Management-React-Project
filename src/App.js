@@ -12,6 +12,7 @@ import AddLeave from './Home/AddLeave';
 import EmployeeDashboard from './Home/EmployeeDashboard';
 import UpdateLeave from './Home/UpdateLeave';
 import LeaveDashBoard from './Home/LeaveDashBoard';
+import ViewLeaveDeatils from './Home/ViewLeaveDeatils';
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
           <Route path='/employeedashbord' element={<EmployeeDashboard></EmployeeDashboard>}></Route>
           <Route path='/updateleave/:id' element={<UpdateLeave></UpdateLeave>}></Route>
           <Route path='/showleave' element={<LeaveDashBoard></LeaveDashBoard>}></Route>
+          <Route path='/viewleavedeatils' element={<ViewLeaveDeatils></ViewLeaveDeatils>}></Route>
         </Routes>
       </div>
     </Router>

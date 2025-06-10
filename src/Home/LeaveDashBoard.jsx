@@ -52,6 +52,9 @@ export default function LeaveDashBoard() {
     <h4 class="card-title">{leave.employeeName}</h4>
     <p class="card-text">
       <strong>Leave Id:</strong>{leave.id} <br />
+       <strong>Employee Id:</strong>{leave.employeeId} <br />
+       <strong>Status:</strong>{leave.status} <br />
+
         <strong>Leave Start Date:</strong>{leave.fromDate} <br />
         <strong>Leave End Date:</strong>{leave.toDate} <br />
         <strong>Leave Reason:</strong>{leave.reason} <br />
