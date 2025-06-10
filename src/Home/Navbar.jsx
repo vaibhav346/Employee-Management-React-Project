@@ -5,7 +5,7 @@ import './Navbar.css'
 // import EmployeeProfile from './EmployeeProfile';
 // import GetEmployee from './GetEmployee';
 import { Link } from 'react-router-dom';
-import EmployeeShow from './EmployeeShow';
+// import EmployeeShow from './EmployeeShow';
 import EmployeeDashboard from './EmployeeDashboard';
 
 export default function Navbar() {
@@ -59,8 +59,8 @@ const toggleMenu = () => {
             <li><a href="/members">Members</a></li>
             <li><a href="/AboutPage">About</a></li>
             <li><a href="/ContactPage">Contact</a></li>
-            <li><a href="/AdminRegister">Admin Register</a></li>
-            <li><a href="/AdminLogin">Admin Login</a></li>
+            <li><a href="/showleave">Show Leave</a></li>
+            <li><a href="/addleave">Add Leave</a></li>
              <li><Link to="/EmployeeR">Add Employee</Link></li>
               <li><a href="/update">Employee Login</a></li>
 

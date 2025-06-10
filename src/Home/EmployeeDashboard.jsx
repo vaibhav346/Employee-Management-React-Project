@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useState,useEffect } from 'react'
 import './EmployeeShow.css'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 // import AdminNavbar from './AdminNavbar'
 
 export default function EmployeeDashboard() {
@@ -120,6 +120,7 @@ let searchbydpet=()=>{
   <div class="card-body">
     <h4 class="card-title">{emp.name}</h4>
     <p class="card-text">
+       <strong>Employee Id:</strong>{emp.eid} <br />
         <strong>Department:</strong>{emp.department} <br />
         <strong>Email:</strong>{emp.email} <br />
         <strong>Role:</strong>{emp.role} <br />
@@ -130,7 +131,7 @@ let searchbydpet=()=>{
         <strong>Address:</strong>{emp.address} <br />
         <strong>Gender:</strong>{emp.gender} <br />
     </p>
-    {/* <button className='delete' onClick={(e)=>{deleteemp(emp.eid)}}>Delete</button>
+    {/* <button className='update' onClick={(e)=>{deleteemp(emp.eid)}}>Delete</button>
     <button className='update' onClick={()=>{nevagite(`/update/${emp.eid}`)}}>Update</button> */}
   </div>
 </div>
