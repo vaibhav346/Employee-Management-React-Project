@@ -42,6 +42,7 @@ export default function LeaveDashBoard() {
     
   return (
     <div className='container'>
+      <h1>Admin Show Leave Details</h1>
         <div className='row'>
 {
       leave.map((leave)=>
