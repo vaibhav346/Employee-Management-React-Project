@@ -2,7 +2,7 @@ import axios from 'axios'
 import { useState,useEffect } from 'react'
 import './EmployeeShow.css'
 import { useNavigate } from 'react-router-dom'
-// import AdminNavbar from './AdminNavbar'
+import AdminNavbar from './AdminNavbar'
 
 export default function EmployeeDashboard() {
 
@@ -88,7 +88,7 @@ let searchbydpet=()=>{
 
   return (
     <div className='container'>
-{/* <AdminNavbar></AdminNavbar> */}
+<AdminNavbar></AdminNavbar>
 <div className='container'>
   <div className='row'>
 

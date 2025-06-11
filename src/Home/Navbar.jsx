@@ -58,9 +58,9 @@ const toggleMenu = () => {
             <li><Link to="/">Home</Link></li>
             <li><a href="/members">Members</a></li>
             <li><a href="/AboutPage">About</a></li>
-            <li><Link to="/viewleavedeatils">View Leave Details</Link></li>
+            <li><Link to="/RegisterForm">Register</Link></li>
             <li><a href="/showleave">Show Leave</a></li>
-            <li><a href="/addleave">Add Leave</a></li>
+            <li><a href="/leaveissue">Leave Issue</a></li>
              <li><Link to="/EmployeeR">Add Employee</Link></li>
               <li><Link to="/EmployeeShow">Employee Login</Link></li>
 

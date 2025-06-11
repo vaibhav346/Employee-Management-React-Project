@@ -13,6 +13,8 @@ import EmployeeDashboard from './Home/EmployeeDashboard';
 import UpdateLeave from './Home/UpdateLeave';
 import LeaveDashBoard from './Home/LeaveDashBoard';
 import ViewLeaveDeatils from './Home/ViewLeaveDeatils';
+import LeaveIssue from './Home/LeaveIssue';
+import UserRegisterForm from './Home/UserRegisterForm';
 
 export default function App() {
   return (
@@ -30,6 +32,8 @@ export default function App() {
           <Route path='/updateleave/:id' element={<UpdateLeave></UpdateLeave>}></Route>
           <Route path='/showleave' element={<LeaveDashBoard></LeaveDashBoard>}></Route>
           <Route path='/viewleavedeatils/:eid' element={<ViewLeaveDeatils></ViewLeaveDeatils>}></Route>
+          <Route path='/leaveissue' element={<LeaveIssue></LeaveIssue>}></Route>
+          <Route path='/RegisterForm' element={<UserRegisterForm></UserRegisterForm>}></Route>
         </Routes>
       </div>
     </Router>

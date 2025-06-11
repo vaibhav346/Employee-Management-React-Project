@@ -27,10 +27,23 @@
   /* margin-left: 30px; */
 }
 button:hover{
-  background-color: blue;
+  background-color: pink;
   color: black;
 }
 
 .con{
   width:16vw;
+}
+.back{
+  background-color: aqua;
+
+  color: black;
+  width: 250px;
+  height: 35px;
+  font-size: large;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 5px;
+  margin: 5px 0px;
 }
