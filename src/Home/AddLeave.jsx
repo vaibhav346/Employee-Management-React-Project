@@ -2,21 +2,26 @@
 import axios from 'axios'
 import React, {useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 
 export default function AddLeave() {
+
+  let params=useParams();
+ let id=params.eid;
 
     let[employeeName,setEmployeeName]=useState("")
     let[reason,setReason]=useState('')
     let[fromDate,setFromDate]=useState('')
     let[toDate,setToDate]=useState('')
-    let[employeeId,setEmployeeId]=useState('')
+    let[employeeId,setEmployeeId]=useState(id)
 
     let navigate=useNavigate();
 
    
 
     let addleave=()=>{
+      console.log(employeeId)
       let addleave={employeeName,reason,fromDate,toDate,employeeId};
       axios.post("http://localhost:8080/leave/apply",addleave)
       .then((resonse)=>{
@@ -34,8 +39,8 @@ export default function AddLeave() {
           <form className="employee-form" onSubmit={addleave} >
       <h2>Employee Get Leave</h2>
 
-            <label>Employee Name:</label>
-      <input type="number" name="Employee Id" placeholder="Employee Id" value={employeeId} onChange={(e)=>{setEmployeeId(e.target.value)}}  />
+            {/* <label>Employee Name:</label> */}
+      {/* <input type="number" name="Employee Id" placeholder="Employee Id" value={employeeId} onChange={(e)=>{setEmployeeId(e.target.value)}}  /> */}
 
       <label>Employee Name:</label>
       <input type="text" name="Employee name" placeholder="Employee Name" value={employeeName} onChange={(e)=>{setEmployeeName(e.target.value)}}  />

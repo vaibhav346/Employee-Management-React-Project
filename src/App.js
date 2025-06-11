@@ -25,11 +25,11 @@ export default function App() {
           <Route path='/update' element={<UpdateEmployee></UpdateEmployee>}></Route>
           <Route path='/getemployee' element={<GetEmployee></GetEmployee>}></Route>
           <Route path='/EmployeeShow' element={<EmployeeShow></EmployeeShow>}></Route>
-          <Route path='/addleave' element={<AddLeave></AddLeave>}></Route>
+          <Route path='/addleave/:eid' element={<AddLeave></AddLeave>}></Route>
           <Route path='/employeedashbord' element={<EmployeeDashboard></EmployeeDashboard>}></Route>
           <Route path='/updateleave/:id' element={<UpdateLeave></UpdateLeave>}></Route>
           <Route path='/showleave' element={<LeaveDashBoard></LeaveDashBoard>}></Route>
-          <Route path='/viewleavedeatils' element={<ViewLeaveDeatils></ViewLeaveDeatils>}></Route>
+          <Route path='/viewleavedeatils/:eid' element={<ViewLeaveDeatils></ViewLeaveDeatils>}></Route>
         </Routes>
       </div>
     </Router>

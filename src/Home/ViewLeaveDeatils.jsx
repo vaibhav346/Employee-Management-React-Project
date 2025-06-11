@@ -1,13 +1,22 @@
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './EmployeeShow.css'
+import { useParams } from 'react-router-dom'
 
 export default function ViewLeaveDeatils() {
-    let [employeeId,setEmployeeId]=useState(0)
+
+  let params=useParams();
+  let id=params.eid;
+  
+    let [employeeId,setEmployeeId]=useState(id)
     let [leave,setLeave]=useState([])
 
+    useEffect(()=>{
+      findleavedata();
+    })
+
     let findleavedata=(event)=>{
-        event.preventDefault();
+        // event.preventDefault();
         console.log(employeeId)
         axios.get(`http://localhost:8080/leave/findbyemployeeid/${employeeId}`)
         .then((response)=>{
@@ -22,10 +31,10 @@ export default function ViewLeaveDeatils() {
 
   return (
     <div className='container'>
-        <form onSubmit={findleavedata}>
+        {/* <form onSubmit={findleavedata}>
       Enter Employee Id:<input type='number' placeholder='Enter Employee Id' value={employeeId} onChange={(e)=>{setEmployeeId(e.target.value)}}></input>
       <input type="submit" value="search" />
-      </form>
+      </form> */}
        <h1>Admin Show Leave Details</h1>
         <div className='row'>
 {

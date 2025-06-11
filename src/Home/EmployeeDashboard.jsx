@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useState,useEffect } from 'react'
 import './EmployeeShow.css'
-// import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 // import AdminNavbar from './AdminNavbar'
 
 export default function EmployeeDashboard() {
@@ -54,7 +54,7 @@ let searchbydpet=()=>{
 
 
     let[emp,setEmp]=useState([])
-    // let nevagite=useNavigate();
+    let nevagite=useNavigate();
     
       // let [error,setError]=useState('')
 
@@ -131,11 +131,12 @@ let searchbydpet=()=>{
         <strong>Address:</strong>{emp.address} <br />
         <strong>Gender:</strong>{emp.gender} <br />
     </p>
-    {/* <button className='update' onClick={(e)=>{deleteemp(emp.eid)}}>Delete</button>
-    <button className='update' onClick={()=>{nevagite(`/update/${emp.eid}`)}}>Update</button> */}
+    <button className='delete'  onClick={()=>{nevagite(`/addleave/${emp.eid}`)}}>GetLeave</button>
+    <button className='update' onClick={()=>{nevagite(`/viewleavedeatils/${emp.eid}`)}}>LeaveDetial</button>
   </div>
 </div>
             </div>
+            //
         )
     }
         </div>
