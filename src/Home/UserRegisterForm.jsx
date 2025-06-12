@@ -1,11 +1,11 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 
-// import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export default function UserRegisterForm() {
 
-    // let navigate=useNavigate();
+    let navigate=useNavigate();
 
 let [name,setName]=useState('')
 let [username,setUsername]=useState('')
@@ -80,14 +80,27 @@ let Register=(event)=>{
 // let [user,setUser]=useState([]);
 // console.log(user);
 
-let Login=()=>{
+let Login=(event)=>{
+     event.preventDefault();
     let login={username,password}
     axios.post("http://localhost:8080/user/login",login)
     .then((response)=>{
         if(response.data){
-            console.log(response.data)
-            alert("Login Sucessfully")
-            // setUser(response.data)
+            // console.log(response.data)
+            alert("Admin Login Sucessfully")
+
+            // localStorage always store data in String
+            localStorage.setItem("user",JSON.stringify(response.data));
+           // JSON.parese() convert data from String to object
+            let userdata=JSON.parse(localStorage.getItem("user"));
+            if(userdata.urole.trim().toLowerCase()=="admin"){
+                navigate("/admindashboard")
+            }
+            else{
+                alert("Employee Login Sucessfully")
+                navigate("/employeedashbord")
+                // console.log(response.data)
+            }
         }
     })
     .catch((error)=>{console.log("Error")})

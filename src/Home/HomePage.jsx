@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
 import AdminNavbar from './AdminNavbar'
-import EmployeeShow from './EmployeeShow'
+import EmployeeShow from './AdminDashBoard'
 
 export default function HomePage() {
   return (

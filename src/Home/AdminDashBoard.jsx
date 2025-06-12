@@ -2,9 +2,9 @@ import axios from 'axios'
 import { useState,useEffect } from 'react'
 import './EmployeeShow.css'
 import { useNavigate } from 'react-router-dom'
-// import AdminNavbar from './AdminNavbar'
+import AdminNavbar from './AdminNavbar'
 
-export default function EmployeeShow() {
+export default function AdminDashBoard() {
 
   let[searchname,setSearchname]=useState('')
   let[searchdepartment,setSearchdepartment]=useState('')
@@ -88,7 +88,7 @@ let searchbydpet=()=>{
 
   return (
     <div className='container'>
-{/* <AdminNavbar></AdminNavbar> */}
+<AdminNavbar></AdminNavbar>
 <div className='container'>
   <div className='row'>
 
