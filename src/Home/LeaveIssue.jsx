@@ -70,7 +70,7 @@ let leavestatus=(id,action)=>{
     </p>
     <button className='delete' onClick={(e)=>{leavestatus(leave.id,"reject")}}>Reject</button>
     <button className='update' onClick={(e)=>{leavestatus(leave.id,"approve")}}>Approve</button>
-    <button className='back'  onClick={(e)=>{navigate("/")}}>Back to home</button>
+    <button className='back'  onClick={(e)=>{navigate("/admindashboard")}}>Back to home</button>
   </div>
 </div>
             </div>

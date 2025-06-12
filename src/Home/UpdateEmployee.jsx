@@ -96,7 +96,7 @@ export default function UpdateEmployee() {
       console.log(response)
       if(response.data!=null){
         alert("Employee data updated sucessfully")
-        navigate("/")
+        navigate("/admindashboard")
       }
      })
      .catch((error)=>{alert("Error")})

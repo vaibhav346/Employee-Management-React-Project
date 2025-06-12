@@ -1,32 +1,54 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './AdminNavbar.css';
+import { useState } from 'react';
+
+
 export default function AdminNavbar() {
 
+ const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+      setMenuOpen(!menuOpen);
+    };
 
   return (
     <div>
       
-      <nav class="navbar navbar-expand-lg navbar-light bg-light" >
-  <div class="container-fluid">
-    <Link class="navbar-brand" to="/">Home</Link>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-         <Link class="navbar-brand" to="/EmployeeR" style={{"padding":"20px"}}>Add Employee</Link>
-        </li>
-       
+   {/* Header with Logo */}
+        <div className="header">
+          <img
+            src="/img/Logo.jpg"
+            alt="Employee Logo"
+          />
+          <h1  style={{
+  textAlign: 'center',
+  color: '#2c3e50',
+  fontFamily: 'Arial, sans-serif',
+  fontWeight: '900', // very bold
+  fontSize: '60px'
+}}> Digital Employee Management System .Pvt .Limited</h1>
+        </div>
 
-        <li class="nav-item">
-          <Link class="navbar-brand" to='/leaveissue'>Leave Issue</Link>
-        </li>
+        <nav className="navbar">
+                  <button className="toggle-btn" onClick={toggleMenu}>☰</button>
+                  <ul className={`nav-links ${menuOpen ? 'show' : ''}`}>
+                   <li><Link to="/admindashboard">Home</Link></li>
+                    <li><Link to="/getemployee">Employees</Link></li>
+                    <li><Link to="/EmployeeR">Add Employee</Link></li>
+                    <li><Link to="/leaveissue">Leave Issue</Link></li>
+                    <li><Link to="/">Logout</Link></li>
+                  
         
-      </ul>
-    </div>
-  </div>
-</nav>
+                  </ul>
+                </nav>
+                 {/* Marquee */}
+        <div className="marquee">
+          <p>📚 Welcome to the Employee Management System! Browse Employee, manage members, and more. 📖</p>
+        </div>
+
+         {/* Copyright Section */}
+   
     </div>
   )
 }

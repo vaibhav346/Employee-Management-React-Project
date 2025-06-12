@@ -20,8 +20,9 @@ export default function AddLeave() {
 
    
 
-    let addleave=()=>{
-      console.log(employeeId)
+    let addleave=(event)=>{
+      event.preventDefault();
+      // console.log(employeeId)
       let addleave={employeeName,reason,fromDate,toDate,employeeId};
       axios.post("http://localhost:8080/leave/apply",addleave)
       .then((resonse)=>{

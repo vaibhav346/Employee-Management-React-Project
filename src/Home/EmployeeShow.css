@@ -47,3 +47,24 @@ button:hover{
   padding: 5px;
   margin: 5px 0px;
 }
+
+  /* copy right css */
+  .footer {
+    text-align: center;
+    /* margin-top: 20px; */
+    padding: 5px;
+    background-color:black;
+   color: white;
+  }
+
+  .cancle{
+     background-color: Red;
+
+  color: white;
+  width: 250px;
+  height: 35px;
+  font-size: large;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  }

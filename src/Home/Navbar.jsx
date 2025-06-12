@@ -1,6 +1,7 @@
 // import React from 'react'
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { useEffect } from 'react';
 import './Navbar.css'
 // import EmployeeProfile from './EmployeeProfile';
 // import GetEmployee from './GetEmployee';
@@ -10,10 +11,33 @@ import { Link } from 'react-router-dom';
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
+     const [currentIndex, setCurrentIndex] = useState(0);
 
 const toggleMenu = () => {
       setMenuOpen(!menuOpen);
     };
+
+     const images = [
+      "/img/img1.jpg",
+      "/img/img2.jpg",
+      "/img/img3.jpg",
+      "/img/img4.jpg",
+      "/img/img5.jpg",
+      "/img/img6.jpg",
+    
+  
+    ];
+  
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setCurrentIndex((prevIndex) =>
+          prevIndex === images.length - 1 ? 0 : prevIndex + 1
+        );
+      }, 3000);
+      return () => clearInterval(interval);
+    }, [images.length]);
+
+
 
      const sendEmail = (e) => {
       e.preventDefault();
@@ -55,14 +79,12 @@ const toggleMenu = () => {
         <nav className="navbar">
           <button className="toggle-btn" onClick={toggleMenu}>☰</button>
           <ul className={`nav-links ${menuOpen ? 'show' : ''}`}>
-            <li><Link to="/">Home</Link></li>
-            <li><a href="/admindashboard">Admin Dashboard</a></li>
-            <li><a href="/AboutPage">About</a></li>
+           <li><Link to="/">Home</Link></li>
+            <li><Link to="/getemployee">Employees</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
             <li><Link to="/RegisterForm">Register</Link></li>
-            <li><a href="/showleave">Show Leave</a></li>
-            <li><a href="/leaveissue">Leave Issue</a></li>
-             <li><Link to="/EmployeeR">Add Employee</Link></li>
-              <li><Link to="/EmployeeShow">Employee Login</Link></li>
+          
 
           </ul>
         </nav>
@@ -73,6 +95,12 @@ const toggleMenu = () => {
         <div className="marquee">
           <p>📚 Welcome to the Employee Management System! Browse Employee, manage members, and more. 📖</p>
         </div>
+
+         {/* Image Slider */}
+        <div className="slider">
+          <img src={images[currentIndex]} alt="Slider" className="slide-image" />
+        </div>
+        {/* Information Table */}
         
 {/* <GetEmployee></GetEmployee> */}
 {/* <AdminDashBoard></AdminDashBoard> */}

@@ -15,6 +15,7 @@ export default function ViewLeaveDeatils() {
       findleavedata();
     })
 
+    
     let findleavedata=(event)=>{
         // event.preventDefault();
         console.log(employeeId)
@@ -22,13 +23,13 @@ export default function ViewLeaveDeatils() {
         .then((response)=>{
             if(response.data){
                 setLeave(response.data)
+
             }
         })
         .catch((error)=>{console.log(error)})
     }
 
-
-
+    
   return (
     <div className='container'>
         {/* <form onSubmit={findleavedata}>
@@ -52,8 +53,8 @@ export default function ViewLeaveDeatils() {
         <strong>Leave Reason:</strong>{leave.reason} <br />
         
     </p>
-    {/* <button className='delete' onClick={(e)=>{deleteleave(leave.id)}}>Delete</button>
-    <button className='update' onClick={()=>{navigate(`/updateleave/${leave.id}`)}}>Update</button> */}
+    {/* <button className='cancle' onClick={()=>{deleteleave(leave.id)}}>Cancle Leave</button> */}
+    {/* <button className='update' onClick={()=>{navigate(`/updateleave/${leave.id}`)}}>Update</button> */}
   </div>
 </div>
             </div>

@@ -87,21 +87,21 @@ let searchbydpet=()=>{
 
 
   return (
-    <div className='container'>
+    <div >
 <AdminNavbar></AdminNavbar>
 <div className='container'>
   <div className='row'>
 
     <div className='col-3'>
-      <input type="text" placeholder='Enter name to search' value={searchname} onChange={(e)=>{setSearchname(e.target.value)}} /><button onClick={searchbyname}>Search</button>
+      <input className="form-control me-2" type="text" placeholder='Enter name to search' value={searchname} onChange={(e)=>{setSearchname(e.target.value)}} /><button class="btn btn-outline-success" onClick={searchbyname}>Search</button>
     </div>
 
      <div className='col-3'>
-     <input type="text" placeholder='Enter Department to search' value={searchdepartment} onChange={(e)=>{setSearchdepartment(e.target.value)}}/><button onClick={searchbydpet}>Search</button>
+     <input className="form-control me-2" type="text" placeholder='Enter Department to search' value={searchdepartment} onChange={(e)=>{setSearchdepartment(e.target.value)}}/><button class="btn btn-outline-success" onClick={searchbydpet}>Search</button>
     </div>
 
     <div className='col-3'>
-     <input type="text" placeholder='Enter Role to search' value={searchrole} onChange={(e)=>{setSearchrole(e.target.value)}} /><button onClick={searchbyrole}>Search</button>
+     <input className="form-control me-2" type="text" placeholder='Enter Role to search' value={searchrole} onChange={(e)=>{setSearchrole(e.target.value)}} /><button class="btn btn-outline-success" onClick={searchbyrole}>Search</button>
     </div>
 
    
@@ -110,6 +110,7 @@ let searchbydpet=()=>{
 
   </div>
 </div>
+<div className='container'>
         <div className='row'>
 {
         (searchresult.length>0?searchresult:emp).map((emp)=>
@@ -138,6 +139,10 @@ let searchbydpet=()=>{
         )
     }
         </div>
+        </div>
+          <footer className="footer">
+          <p>&copy; {new Date().getFullYear()} Vaibhav vikas dhere. Library Management System. All Rights Reserved.</p>
+        </footer>
        
     </div>
   )

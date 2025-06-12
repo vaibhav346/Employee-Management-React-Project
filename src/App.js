@@ -7,7 +7,7 @@ import HomePage from './Home/HomePage';
 import AddEmployee from './Home/AddEmployee';
 import UpdateEmployee from './Home/UpdateEmployee';
 import GetEmployee from './Home/GetEmployee';
-import EmployeeShow from './Home/AdminDashBoard';
+// import EmployeeShow from './Home/AdminDashBoard';
 import AddLeave from './Home/AddLeave';
 import EmployeeDashboard from './Home/EmployeeDashboard';
 import UpdateLeave from './Home/UpdateLeave';
@@ -16,6 +16,8 @@ import ViewLeaveDeatils from './Home/ViewLeaveDeatils';
 import LeaveIssue from './Home/LeaveIssue';
 import UserRegisterForm from './Home/UserRegisterForm';
 import AdminDashBoard from './Home/AdminDashBoard';
+import ContactPage from './Home/ContactPage';
+import About from './Home/About'
 
 export default function App() {
   return (
@@ -35,6 +37,8 @@ export default function App() {
           <Route path='/viewleavedeatils/:eid' element={<ViewLeaveDeatils></ViewLeaveDeatils>}></Route>
           <Route path='/leaveissue' element={<LeaveIssue></LeaveIssue>}></Route>
           <Route path='/RegisterForm' element={<UserRegisterForm></UserRegisterForm>}></Route>
+          <Route path='/about' element={<About></About>}></Route>
+          <Route path='/contact' element={<ContactPage></ContactPage>}></Route>
         </Routes>
       </div>
     </Router>
