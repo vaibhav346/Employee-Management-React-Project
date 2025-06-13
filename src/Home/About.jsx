@@ -1,37 +1,44 @@
 import React from 'react';
-import './About.css';  // Importing the external CSS
+import './About.css';  // External CSS for styling
 
 function About() {
   return (
     <div className="about-page">
       <header className="about-header">
-        <h1>About Us</h1>
-        <p>Welcome to our site. Learn more about who we are and what we do!</p>
+        <h1>About HefShine Private Limited</h1>
       </header>
 
       <section className="about-section">
-        <h2>Our Mission</h2>
         <p>
-          Our mission is to provide high-quality services and create lasting relationships with our customers. We believe in innovation, integrity, and excellence.
+          HefShine Private Limited is a leading software training and development company focused on
+          empowering fresh graduates and IT enthusiasts with real-world skills.
         </p>
-      </section>
 
-      <section className="about-section">
-        <h2>Our Vision</h2>
         <p>
-          We envision a future where technology empowers people and organizations to reach their full potential. We strive to create solutions that make a meaningful impact on society.
+          We believe in combining <strong>practical training</strong> with <strong>real project work</strong>.
+          Our Employee Management System is an in-house project built by trainees to simulate real industry development.
         </p>
-      </section>
 
-      <section className="about-section">
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:info@ourcompany.com">info@ourcompany.com</a></p>
-        <p>Phone: +1 (123) 456-7890</p>
-        <p>Address: 123 Our Company St, Tech City, ABC</p>
+        <p>
+          Our team consists of talented students and mentors who collaborate to build enterprise-ready
+          applications using modern technologies such as:
+        </p>
+
+        <ul className="tech-list">
+          <li>✅ Spring Boot (Java Backend)</li>
+          <li>✅ ReactJS Frontend</li>
+          <li>✅ MySQL Database</li>
+          <li>✅ REST APIs</li>
+        </ul>
+
+        <p>
+          We are committed to creating <strong>learning opportunities</strong> through hands-on experience,
+          mentoring, and job-oriented training programs.
+        </p>
       </section>
 
       <footer className="about-footer">
-        <p>&copy; 2025 Our Company. All rights reserved.</p>
+        <p>&copy; 2025 HefShine Private Limited. All rights reserved.</p>
       </footer>
     </div>
   );

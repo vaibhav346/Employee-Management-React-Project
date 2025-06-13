@@ -118,7 +118,7 @@ let Login=(event)=>{
       <input type="password" name="confirmpassword"  placeholder="Confirm Password" value={confirmpassword} onChange={(e)=>{setConfirmpassword(e.target.value)}} required/>
 <select name="role" value={urole} onChange={(e)=>{setUrole(e.target.value)}} required>
     <option value="">Select Role</option>
-    <option value="Admin">Admin</option>
+    {/* <option value="Admin">Admin</option> */}
     <option value="Employee">Employee</option>
 </select>
       <input type="text" name="email" placeholder="Email" value={email} onChange={(e)=>{setEmail(e.target.value)}} required/>

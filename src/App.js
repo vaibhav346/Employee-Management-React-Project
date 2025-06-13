@@ -18,6 +18,7 @@ import UserRegisterForm from './Home/UserRegisterForm';
 import AdminDashBoard from './Home/AdminDashBoard';
 import ContactPage from './Home/ContactPage';
 import About from './Home/About'
+import Service from './Home/Service';
 
 export default function App() {
   return (
@@ -39,6 +40,7 @@ export default function App() {
           <Route path='/RegisterForm' element={<UserRegisterForm></UserRegisterForm>}></Route>
           <Route path='/about' element={<About></About>}></Route>
           <Route path='/contact' element={<ContactPage></ContactPage>}></Route>
+          <Route path='/Service' element={<Service></Service>}></Route>
         </Routes>
       </div>
     </Router>

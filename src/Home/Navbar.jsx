@@ -76,14 +76,16 @@ const toggleMenu = () => {
 }}> Digital Employee Management System .Pvt .Limited</h1>
         </div>
   
-        <nav className="navbar">
+        <nav className="navbar-home">
           <button className="toggle-btn" onClick={toggleMenu}>☰</button>
-          <ul className={`nav-links ${menuOpen ? 'show' : ''}`}>
-           <li><Link to="/">Home</Link></li>
-            <li><Link to="/getemployee">Employees</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-            <li><Link to="/RegisterForm">Register</Link></li>
+          <ul className={`nav-links-home ${menuOpen ? 'show' : ''}`}>
+            <li ><Link className='links-home'  to="/">Home</Link></li>
+            <li ><Link className='links-home' to="/getemployee">Employees</Link></li>
+           
+            <li ><Link className='links-home' to="/about">About</Link></li>
+            <li ><Link className='links-home' to="/Service">Services</Link></li>
+            <li ><Link className='links-home' to="/contact">Contact</Link></li>
+            <li ><Link className='links-home' to="/RegisterForm">Register</Link></li>
           
 
           </ul>
@@ -92,7 +94,7 @@ const toggleMenu = () => {
     
   
         {/* Marquee */}
-        <div className="marquee">
+        <div className="marquee-home">
           <p>📚 Welcome to the Employee Management System! Browse Employee, manage members, and more. 📖</p>
         </div>
 
