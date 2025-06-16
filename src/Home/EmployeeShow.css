@@ -1,5 +1,4 @@
-
-.delete{
+.delete {
   background-color: Red;
 
   color: white;
@@ -9,11 +8,8 @@
   border-radius: 30px;
   cursor: pointer;
   font-weight: bold;
-  
-  
-  
 }
-.update{
+.update {
   background-color: green;
   display: inline-block;
   color: white;
@@ -26,15 +22,15 @@
   margin-left: 30px;
   /* margin-left: 30px; */
 }
-button:hover{
+button:hover {
   background-color: pink;
   color: black;
 }
 
-.con{
-  width:16vw;
+.con {
+  width: 16vw;
 }
-.back{
+.back {
   background-color: aqua;
 
   color: black;
@@ -48,17 +44,17 @@ button:hover{
   margin: 5px 0px;
 }
 
-  /* copy right css */
-  .footer {
-    text-align: center;
-    /* margin-top: 20px; */
-    padding: 5px;
-    background-color:black;
-   color: white;
-  }
+/* copy right css */
+.footer {
+  text-align: center;
+  /* margin-top: 20px; */
+  padding: 5px;
+  background-color: black;
+  color: white;
+}
 
-  .cancle{
-     background-color: Red;
+.cancle {
+  background-color: Red;
 
   color: white;
   width: 250px;
@@ -67,4 +63,4 @@ button:hover{
   border-radius: 30px;
   cursor: pointer;
   font-weight: bold;
-  }
+}

@@ -1,5 +1,5 @@
-import React from 'react';
-import './About.css';  // External CSS for styling
+import React from "react";
+import "./About.css"; // External CSS for styling
 
 function About() {
   return (
@@ -10,18 +10,21 @@ function About() {
 
       <section className="about-section">
         <p>
-          HefShine Private Limited is a leading software training and development company focused on
-          empowering fresh graduates and IT enthusiasts with real-world skills.
+          HefShine Private Limited is a leading software training and
+          development company focused on empowering fresh graduates and IT
+          enthusiasts with real-world skills.
         </p>
 
         <p>
-          We believe in combining <strong>practical training</strong> with <strong>real project work</strong>.
-          Our Employee Management System is an in-house project built by trainees to simulate real industry development.
+          We believe in combining <strong>practical training</strong> with{" "}
+          <strong>real project work</strong>. Our Employee Management System is
+          an in-house project built by trainees to simulate real industry
+          development.
         </p>
 
         <p>
-          Our team consists of talented students and mentors who collaborate to build enterprise-ready
-          applications using modern technologies such as:
+          Our team consists of talented students and mentors who collaborate to
+          build enterprise-ready applications using modern technologies such as:
         </p>
 
         <ul className="tech-list">
@@ -32,8 +35,9 @@ function About() {
         </ul>
 
         <p>
-          We are committed to creating <strong>learning opportunities</strong> through hands-on experience,
-          mentoring, and job-oriented training programs.
+          We are committed to creating <strong>learning opportunities</strong>{" "}
+          through hands-on experience, mentoring, and job-oriented training
+          programs.
         </p>
       </section>
 
