@@ -224,7 +224,7 @@ export default function UserRegisterForm() {
       ) : (
         <form
           className="employee-form"
-          style={{ margin: "200px 550px" }}
+          
           onSubmit={Login}
         >
           <h2>Login Page</h2>
