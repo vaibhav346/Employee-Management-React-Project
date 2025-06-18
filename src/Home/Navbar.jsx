@@ -71,12 +71,18 @@ export default function Navbar() {
             color: "#2c3e50",
             fontFamily: "Arial, sans-serif",
             fontWeight: "900", // very bold
-            fontSize: "60px",
+            fontSize: "43px",
           }}
         >
           {" "}
           Digital Employee Management System .Pvt .Limited
         </h1>
+
+        {/* <h1 style={{ fontSize: window.innerWidth < 768 ? "22px" : "43px" }}>
+  {window.innerWidth < 768
+    ? "Employee Mgmt System Pvt Ltd"
+    : "Digital Employee Management System .Pvt .Limited"}
+</h1> */}
       </div>
 
       <nav className="navbar-home">

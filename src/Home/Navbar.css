@@ -22,15 +22,15 @@
   margin-right: 15px;
 }
 
-.header h1 {
-  width: 80%;
-  font-size: 52px;
-  margin: 0;
-  text-align: center;
-  padding-left: 2%;
+ /* .header h1 { */
+  /* width: 80%; */
+  /* font-size: 45px; */
+  /* margin: 0; */
+  /* text-align: center; */
+  /* padding-left: 2%; */
   /* border: 2px solid black; */
-  color: rgb(19, 74, 152);
-}
+  /* color: rgb(19, 74, 152); */
+/* } */
 
 /* Navbar Css */
 body {
@@ -92,28 +92,78 @@ body {
 }
 
 /* Responsive Design */
+/* Responsive Design */
 @media (max-width: 768px) {
-  .nav-links {
+  /* Navbar responsive */
+  .nav-links-home {
     flex-direction: column;
     display: none;
     background-color: black;
     width: 100%;
-    /* height: 168px; */
     position: absolute;
     top: 86px;
     left: 0;
+    padding: 10px 0;
+    z-index: 10;
   }
 
-  .nav-links.show {
+  .nav-links-home.show {
     display: flex;
-    /* border: 2px solid white; */
+  }
+
+  .nav-links-home li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .links-home {
+    width: 80%;
+    margin: 8px auto;
+    text-align: center;
   }
 
   .toggle-btn {
     display: block;
-    /* border: 2px solid white; */
+    margin-left: 15px;
+  }
+
+  .navbar-home {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding-left: 5%;
+    position: relative;
+  }
+
+  /* Header responsive */
+  .header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    display: flex; /* Ensure it's still a flex container */
+  }
+
+  .header img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px auto; /* Center the logo */
+    display: block;
+  }
+
+  .header h1 {
+    font-size: 22px;
+    width: 90%;
+    padding: 0 10px;
+    line-height: 1.2;
+    white-space: normal;
+    word-break: break-word;
+    margin: 0;
   }
 }
+
+
 
 /* marquee tag css
    */
