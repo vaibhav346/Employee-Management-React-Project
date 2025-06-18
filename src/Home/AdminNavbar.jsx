@@ -14,7 +14,7 @@ export default function AdminNavbar() {
     <div>
       {/* Header with Logo */}
       <div className="header">
-        <img src="/img/Logo.jpg" alt="Employee Logo" />
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK0Hc78tkH6KUQLDTPH2DubaE1XZr9n6offA&s" alt="Employee Logo" />
         <h1
           style={{
             textAlign: "center",

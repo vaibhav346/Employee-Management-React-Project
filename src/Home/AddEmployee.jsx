@@ -32,7 +32,7 @@ export default function UpdateAndAddEmployee() {
   const [gender, setGender] = useState("");
   let [error, setError] = useState("");
 
-  var app="http://http://51.20.187.166:8080/Employee_Management_System-0.0.1-SNAPSHOT"
+  var app="http://51.20.187.166:8080/Employee_Management_System-0.0.1-SNAPSHOT"
 
   let validation = () => {
     if (
@@ -96,7 +96,7 @@ export default function UpdateAndAddEmployee() {
         .then((response) => {
           if (response.data) {
             alert("Employee added sucessfully");
-            navigate("/");
+            navigate("/admindashboard");
           }
         })
         .catch((error) => {

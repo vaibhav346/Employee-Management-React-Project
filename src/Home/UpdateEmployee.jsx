@@ -13,7 +13,7 @@ export default function UpdateEmployee() {
   // console.log(id);
   let navigate = useNavigate();
 
-    var app="http://http://51.20.187.166:8080/Employee_Management_System-0.0.1-SNAPSHOT"
+    var app="http://51.20.187.166:8080/Employee_Management_System-0.0.1-SNAPSHOT"
 
 
   // let[isupdate,setIsupdate]=useState(false)
@@ -60,7 +60,7 @@ export default function UpdateEmployee() {
 
   let getemployee = () => {
     axios
-      .get(`{${app}}/api/findbyid/${id}`)
+      .get(`${app}/api/findbyid/${id}`)
       .then((response) => {
         const d = response.data;
         setEmp(d); // just if you need it elsewhere

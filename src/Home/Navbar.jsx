@@ -18,12 +18,11 @@ export default function Navbar() {
   };
 
   const images = [
-    "/img/img1.jpg",
-    "/img/img2.jpg",
-    "/img/img3.jpg",
-    "/img/img4.jpg",
-    "/img/img5.jpg",
-    "/img/img6.jpg",
+    "https://okcredit-blog-images-prod.storage.googleapis.com/2021/03/Employee-and-Staff-Management2--1-.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU7wEmMxaSNoL166I9KJ6KBgVeBQsskqzzfQ&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNN0RUUbscmYE1JvFhsCvq7Vr2NVSjXTzD0w&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc0aynPP6q_4CGmxE7u45PjETGH-dUsg3Lrw&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf0DVT7E701tQDrygWzz6NWS3lc-Lwf04s5g&s",
   ];
 
   useEffect(() => {
@@ -58,11 +57,14 @@ export default function Navbar() {
     e.target.reset(); // clear form after submission
   };
 
+  // console.log("/img/Logo.jpg")
+
   return (
     <div>
       {/* Header with Logo */}
       <div className="header">
-        <img src="/img/Logo.jpg" alt="Employee Logo" />
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK0Hc78tkH6KUQLDTPH2DubaE1XZr9n6offA&s" alt="Employee Logo" />
+        
         <h1
           style={{
             textAlign: "center",

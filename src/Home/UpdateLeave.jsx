@@ -16,7 +16,7 @@ export default function UpdateLeave() {
   let [fromDate, setFromDate] = useState("");
   let [toDate, setToDate] = useState("");
 
-    var app="http://http://51.20.187.166:8080/Employee_Management_System-0.0.1-SNAPSHOT"
+    var app="http://51.20.187.166:8080/Employee_Management_System-0.0.1-SNAPSHOT"
 
 
   let navigate = useNavigate();
