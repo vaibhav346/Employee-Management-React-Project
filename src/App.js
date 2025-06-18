@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {  Routes, Route } from "react-router-dom";
 
 import HomePage from "./Home/HomePage";
 import AddEmployee from "./Home/AddEmployee";
@@ -22,7 +22,7 @@ import Service from "./Home/Service";
 
 export default function App() {
   return (
-    <Router>
+    // <Router>
       <div>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -73,6 +73,6 @@ export default function App() {
           <Route path="/Service" element={<Service></Service>}></Route>
         </Routes>
       </div>
-    </Router>
+    // </Router>
   );
 }

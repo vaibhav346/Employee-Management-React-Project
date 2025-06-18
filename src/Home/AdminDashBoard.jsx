@@ -10,9 +10,12 @@ export default function AdminDashBoard() {
   let [searchrole, setSearchrole] = useState("");
   let [searchresult, setSearchresult] = useState([]);
 
+    var app="http://http://51.20.187.166:8080/Employee_Management_System-0.0.1-SNAPSHOT"
+
+
   let searchbyname = () => {
     axios
-      .get(`http://localhost:8080/api/findbyname/${searchname}`)
+      .get(`${app}/api/findbyname/${searchname}`)
       .then((response) => {
         if (response.data) {
           setSearchresult(response.data);
@@ -27,7 +30,7 @@ export default function AdminDashBoard() {
 
   let searchbyrole = () => {
     axios
-      .get(`http://localhost:8080/api/findbyrole/${searchrole}`)
+      .get(`${app}/api/findbyrole/${searchrole}`)
       .then((response) => {
         if (response.data) {
           setSearchresult(response.data);
@@ -42,7 +45,7 @@ export default function AdminDashBoard() {
   let searchbydpet = () => {
     // console.log(searchrole)
     axios
-      .get(`http://localhost:8080/api/findbydepartment/${searchdepartment}`)
+      .get(`${app}/api/findbydepartment/${searchdepartment}`)
 
       .then((response) => {
         if (response.data) {
@@ -67,7 +70,7 @@ export default function AdminDashBoard() {
 
   let fechempdata = () => {
     axios
-      .get("http://localhost:8080/api/findall")
+      .get(`${app}/api/findall`)
       .then((response) => {
         setEmp(response.data);
       })
@@ -78,7 +81,7 @@ export default function AdminDashBoard() {
 
   let deleteemp = (eid) => {
     axios
-      .delete(`http://localhost:8080/api/deletebyid/${eid}`)
+      .delete(`${app}/api/deletebyid/${eid}`)
       .then((response) => {
         if (response.data != null) {
           alert("Record deleted successfully");

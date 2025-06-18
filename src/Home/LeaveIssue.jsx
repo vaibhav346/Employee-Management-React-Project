@@ -8,13 +8,16 @@ export default function LeaveIssue() {
   let [leave, setLeave] = useState([]);
   let navigate = useNavigate();
 
+    var app="http://http://51.20.187.166:8080/Employee_Management_System-0.0.1-SNAPSHOT"
+
+
   useEffect(() => {
     getleave();
   }, []);
 
   let getleave = () => {
     axios
-      .get("http://localhost:8080/leave/findallleaves")
+      .get(`${app}/leave/findallleaves`)
       .then((response) => {
         // console.log(response.data)
         // const d=(response.data)
@@ -28,7 +31,7 @@ export default function LeaveIssue() {
 
   let leavestatus = (id, action) => {
     axios
-      .put(`http://localhost:8080/leave/${action}/${id}`)
+      .put(`${app}/leave/${action}/${id}`)
       .then((response) => {
         if (response.data) {
           alert("Leave Approved sucessfully");

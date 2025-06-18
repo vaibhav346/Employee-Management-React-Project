@@ -16,6 +16,9 @@ export default function UpdateLeave() {
   let [fromDate, setFromDate] = useState("");
   let [toDate, setToDate] = useState("");
 
+    var app="http://http://51.20.187.166:8080/Employee_Management_System-0.0.1-SNAPSHOT"
+
+
   let navigate = useNavigate();
 
   useEffect(() => {
@@ -25,7 +28,7 @@ export default function UpdateLeave() {
 
   let getleave = () => {
     axios
-      .get(`http://localhost:8080/leave/findleavebyid/${id}`)
+      .get(`${app}/leave/findleavebyid/${id}`)
       .then((response) => {
         // just if you need it elsewhere
         // setEmployee(response.data)
@@ -44,7 +47,7 @@ export default function UpdateLeave() {
   let updateleave = () => {
     let uleave = { employeeName, fromDate, reason, toDate };
     axios
-      .put(`http://localhost:8080/leave/updateleave/${id}`, uleave)
+      .put(`${app}/leave/updateleave/${id}`, uleave)
       .then((response) => {
         if (response.data != null) {
           alert("Leave Update sucessfully");

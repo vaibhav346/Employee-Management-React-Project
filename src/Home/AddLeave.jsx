@@ -13,6 +13,9 @@ export default function AddLeave() {
   let [toDate, setToDate] = useState("");
   let [employeeId, setEmployeeId] = useState(id);
 
+  var app="http://http://51.20.187.166:8080/Employee_Management_System-0.0.1-SNAPSHOT"
+
+
   let navigate = useNavigate();
 
   let addleave = (event) => {
@@ -20,7 +23,7 @@ export default function AddLeave() {
     // console.log(employeeId)
     let addleave = { employeeName, reason, fromDate, toDate, employeeId };
     axios
-      .post("http://localhost:8080/leave/apply", addleave)
+      .post(`${app}/leave/apply`, addleave)
       .then((resonse) => {
         if (resonse.data) {
           alert("Applied for leave sucessfully");

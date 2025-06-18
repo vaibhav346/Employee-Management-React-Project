@@ -15,6 +15,9 @@ export default function UserRegisterForm() {
   let [urole, setUrole] = useState("");
   let [gender, setGender] = useState("");
 
+    var app="http://http://51.20.187.166:8080/Employee_Management_System-0.0.1-SNAPSHOT"
+
+
   //isregistered is true is registration completed.
   let [isregistered, setIsregistered] = useState(false);
 
@@ -53,7 +56,7 @@ export default function UserRegisterForm() {
         gender,
       };
       axios
-        .post("http://localhost:8080/user/registe", register)
+        .post(`${app}/user/registe`, register)
         .then((response) => {
           if (
             response.data ===
@@ -87,7 +90,7 @@ export default function UserRegisterForm() {
     event.preventDefault();
     let login = { username, password };
     axios
-      .post("http://localhost:8080/user/login", login)
+      .post(`${app}/user/login`, login)
       .then((response) => {
         if (response.data) {
           // console.log(response.data)

@@ -8,13 +8,16 @@ export default function EmployeeProfile() {
   let [employees, setEmployees] = useState([]);
   let [error, setError] = useState("");
 
+    var app="http://http://51.20.187.166:8080/Employee_Management_System-0.0.1-SNAPSHOT"
+
+
   useEffect(() => {
     fechemployees();
   }, []);
 
   let fechemployees = () => {
     axios
-      .get("http://localhost:8080/api/findall") // fetch all employees
+      .get(`${app}/api/findall`) // fetch all employees
       .then((response) => {
         setEmployees(response.data);
         console.log(response);

@@ -32,6 +32,8 @@ export default function UpdateAndAddEmployee() {
   const [gender, setGender] = useState("");
   let [error, setError] = useState("");
 
+  var app="http://http://51.20.187.166:8080/Employee_Management_System-0.0.1-SNAPSHOT"
+
   let validation = () => {
     if (
       name.trim() == "" ||
@@ -90,7 +92,7 @@ export default function UpdateAndAddEmployee() {
         img,
       };
       axios
-        .post("http://localhost:8080/api/save", empadd)
+        .post(`${app}/api/save`, empadd)
         .then((response) => {
           if (response.data) {
             alert("Employee added sucessfully");

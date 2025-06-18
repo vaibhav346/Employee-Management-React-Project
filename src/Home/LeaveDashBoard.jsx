@@ -7,13 +7,16 @@ export default function LeaveDashBoard() {
   let [leave, setLeave] = useState([]);
   let navigate = useNavigate();
 
+    var app="http://http://51.20.187.166:8080/Employee_Management_System-0.0.1-SNAPSHOT"
+
+
   useEffect(() => {
     getleave();
   }, []);
 
   let getleave = () => {
     axios
-      .get("http://localhost:8080/leave/findallleaves")
+      .get(`${app}/leave/findallleaves`)
       .then((response) => {
         // console.log(response.data)
         // const d=(response.data)
@@ -27,7 +30,7 @@ export default function LeaveDashBoard() {
 
   let deleteleave = (id) => {
     axios
-      .delete(`http://localhost:8080/leave/cancelleave/${id}`)
+      .delete(`${app}/leave/cancelleave/${id}`)
       .then((response) => {
         if (response.data != null) {
           alert("Cancle Leave");

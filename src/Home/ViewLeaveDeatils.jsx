@@ -10,6 +10,9 @@ export default function ViewLeaveDeatils() {
   let [employeeId, setEmployeeId] = useState(id);
   let [leave, setLeave] = useState([]);
 
+    var app="http://http://51.20.187.166:8080/Employee_Management_System-0.0.1-SNAPSHOT"
+
+
   useEffect(() => {
     findleavedata();
   });
@@ -18,7 +21,7 @@ export default function ViewLeaveDeatils() {
     // event.preventDefault();
     console.log(employeeId);
     axios
-      .get(`http://localhost:8080/leave/findbyemployeeid/${employeeId}`)
+      .get(`${app}/leave/findbyemployeeid/${employeeId}`)
       .then((response) => {
         if (response.data) {
           setLeave(response.data);
